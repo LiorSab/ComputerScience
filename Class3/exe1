@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args)
+	{
+		int num1=5;
+		int num2=6;
+		int num3=9;
+		int sum=(num1*num2*num3);
+		double avg=sum/3.00;
+		System.out.println(avg);
+	}
+}
