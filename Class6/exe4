@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void isPalindrome(String input)
+    {
+        // Remove any non-alphanumeric characters and convert to lower case
+        String cleanInput = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+
+        int left = 0;
+        int right = cleanInput.length() - 1;
+
+        while (left < right)
+        {
+            if (cleanInput.charAt(left) != cleanInput.charAt(right)) 
+            {
+                System.out.println(input + " is not a palindrome.");
+                return;
+            }
+            left++;
+            right--;
+        }
+
+        System.out.println(input + "- is a palindrome.");
+    }
+	public static void main(String[] args) 
+	{
+        // Example usage of the function:
+        isPalindrome("A man, a plan, a canal: Panama");
+        isPalindrome("racecar");
+        isPalindrome("hello");
+    }
+}
