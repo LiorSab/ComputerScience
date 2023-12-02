@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void creditCode(int correctCode) 
+    {
+        Scanner scanner = new Scanner(System.in);
+        int attempts = 0;
+        int userInput;
+        boolean isCorrect=false;
+        do{
+            System.out.print("Please enter the 4-digit credit card code: ");
+            userInput = scanner.nextInt();
+            attempts++;
+
+            if (userInput == correctCode) {
+                System.out.println("How much money?");
+                isCorrect = true;
+                break; // Exit the loop if the code is correct
+            } else {
+                System.out.println("Incorrect code.");
+            }
+        }
+        while(attempts < 3 && !isCorrect);
+        if(!isCorrect)
+        {
+            System.out.println("Error");
+        }
+    }
+	public static void main(String[] args)
+	{
+	    creditCode(1234);
+	}
+}
