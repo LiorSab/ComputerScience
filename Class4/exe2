@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args)
+	{
+	    Scanner input = new Scanner(System.in);
+        System.out.println("Enter a string:" );
+        String str1=input.nextLine();
+        int size=str1.length();
+        System.out.println("Length of the input string:" + size);
+ 
+    }
+}
