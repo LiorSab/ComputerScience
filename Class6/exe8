@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main
+{
+    public static boolean isFibonacci(int number) 
+    {
+        if (number == 0 || number == 1) return true;
+
+        int a = 0, b = 1;
+        int fibonacci = a + b;
+
+        while (fibonacci < number) {
+            a = b;
+            b = fibonacci;
+            fibonacci = a + b;
+        }
+
+        return fibonacci == number;
+    }
+	public static void main(String[] args) 
+	{
+       int numberToCheck = 34; // Example number
+        System.out.println(numberToCheck + " is a Fibonacci number: " + isFibonacci(numberToCheck));
+    }
+}
