@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void printIsoscelesStarTriangle(int height)
+    {
+        for (int row = 1; row <= height; row++) {
+            // Print leading spaces
+            for (int space = height - row; space > 0; space--) {
+                System.out.print(" ");
+            }
+            // Print stars
+            for (int star = 1; star <= (2 * row) - 1; star++) {
+                System.out.print("*");
+            }
+            System.out.println(); // Move to the next line
+        }
+    }
+	public static void main(String[] args) 
+	{
+        int height = 3; // Example height
+        printIsoscelesStarTriangle(height);
+    }
+}
