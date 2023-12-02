@@ -1,0 +1,20 @@
+public class Tester {
+    public static void main(String[] args) {
+        // Creating an ArithmeticProgression instance
+        ArithmeticProgression ap = new ArithmeticProgression(3, 5); // Example: first term is 3, difference is 5
+
+        // Testing the functions
+        ap.printGeneralSeries(); // Prints the general formula
+
+        int n = 5; // Example: Calculate the 5th member
+        System.out.println("The " + n + "th member of the series is: " + ap.memberCalculation(n));
+
+        int a = 18; // Example: Given term is 18
+        float calculatedN = ap.calculateN(a);
+        if (calculatedN != 0) {
+            System.out.println("The term " + a + " is the " + calculatedN + "th member of the series.");
+        } else {
+            System.out.println("The term " + a + " does not belong to the series.");
+        }
+    }
+}
