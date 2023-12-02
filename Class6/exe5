@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void printDivisors(int number)
+    {
+        // We start the loop from 1 to the number
+        for (int i = 1; i <= number; i++) 
+        {
+            // If 'i' is a divisor of 'number'
+            if (number % i == 0) 
+            {
+                // Print 'i'
+                System.out.print(i);
+                // If 'i' is not the number itself, we print a comma
+                // This ensures no trailing comma is printed
+                if (i != number)
+                {
+                    System.out.print(", ");
+                }
+            }
+        }
+    }
+	public static void main(String[] args) 
+	{
+        printDivisors(24);
+    }
+}
