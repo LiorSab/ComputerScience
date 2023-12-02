@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args)
+	{
+	    Scanner input = new Scanner(System.in);
+        System.out.println("Enter name 1:" );
+        String name1=input.next();
+        System.out.println("Enter name 2:" );
+        String name2=input.next();
+        System.out.println("Enter name 3:" );
+        String name3=input.next();
+        String first,middle,last;
+        if(name1.compareToIgnoreCase(name2)<0)
+        {
+            first=name1;
+            middle=name2;
+        }
+        else{
+            first=name2;
+            middle=name1;
+        }
+        if(middle.compareToIgnoreCase(name3)<0)
+        {
+            last=name3;
+        }
+        else{
+            last=middle;
+            middle=name3;
+        }
+        System.out.println("First:" +first);
+        System.out.println("second:" +middle);
+        System.out.println("third:"+last );
+    }
+}
