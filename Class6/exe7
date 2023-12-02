@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void printMinMaxGrade(int[] grades) {
+        if (grades.length == 0) {
+            System.out.println("No grades provided.");
+            return;
+        }
+
+        int min = grades[0];
+        int max = grades[0];
+
+        for (int grade : grades) {
+            if (grade < min) {
+                min = grade;
+            }
+            if (grade > max) {
+                max = grade;
+            }
+        }
+
+        System.out.println("Minimum grade: " + min);
+        System.out.println("Maximum grade: " + max);
+    }
+	public static void main(String[] args) 
+	{
+       int[] studentGrades = {85, 93, 67, 88, 92, 78, 79}; // Example grades
+       printMinMaxGrade(studentGrades);
+    }
+}
