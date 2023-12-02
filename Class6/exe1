@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main
+{
+    public static double calculateAverage()
+	    {
+        Scanner scanner = new Scanner(System.in);
+        double sum = 0;
+        int numberOfScores = 5;
+
+        for (int i = 1; i <= numberOfScores; i++) {
+            System.out.print("Enter score " + i + ": ");
+            double score = scanner.nextDouble();
+            sum += score;
+        }
+
+        double average = sum / numberOfScores;
+        scanner.close(); 
+
+        return average;
+    }
+	public static void main(String[] args)
+	{
+	    double average = calculateAverage();
+        System.out.println("The average score is: " + average);
+	}
+}
