@@ -1,0 +1,54 @@
+public class ArithmeticProgression {
+    private int firstMember;
+    private int difference;
+
+    // Existing Constructor
+    public ArithmeticProgression(int fM, int diff) {
+        this.firstMember = fM;
+        this.difference = diff;
+    }
+
+    // Copy Constructor
+    public ArithmeticProgression(ArithmeticProgression other) {
+        this.firstMember = other.firstMember;
+        this.difference = other.difference;
+    }
+
+    // Prints the general formula of the series
+    public void printGeneralSeries() {
+        System.out.println("General formula of the series: a(n) = a + (n - 1) * d");
+    }
+
+    // Returns the nth member of the series
+    public int memberCalculation(int n) {
+        return firstMember + (n - 1) * difference;
+    }
+
+    // Calculates the n-th term from a given term a
+    public float calculateN(int a) {
+        if ((a - firstMember) % difference == 0) {
+            return 1 + (float)(a - firstMember) / difference;
+        }
+        return 0;
+    }
+
+    // Getter for firstMember
+    public int getFirstMember() {
+        return firstMember;
+    }
+
+    // Getter for difference
+    public int getDifference() {
+        return difference;
+    }
+
+    // Setter for firstMember
+    public void setFirstMember(int fM) {
+        this.firstMember = fM;
+    }
+
+    // Setter for difference
+    public void setDifference(int diff) {
+        this.difference = diff;
+    }
+}
