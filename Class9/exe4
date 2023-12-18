@@ -1,0 +1,27 @@
+public class OddConsecutivePairs {
+
+    public static void main(String[] args) {
+        int[] numbers = {1, 3, 2, 5, 7, 8, 4, 9, 6, 11};
+
+        // Call the function to print consecutive odd value pairs
+        printOddConsecutivePairs(numbers);
+    }
+
+    public static void printOddConsecutivePairs(int[] array) {
+        // Check if the array has at least two elements
+        if (array.length < 2) {
+            System.out.println("Not enough elements in the array to form consecutive pairs.");
+            return;
+        }
+
+        System.out.println("Consecutive cell pairs with odd values:");
+
+        // Iterate through the array up to the second-to-last element
+        for (int i = 0; i < array.length - 1; i++) {
+            // Check if the current and next elements have odd values
+            if (array[i] % 2 == 1 && array[i + 1] % 2 == 1) {
+                System.out.println("(" + array[i] + ", " + array[i + 1] + ")");
+            }
+        }
+    }
+}
