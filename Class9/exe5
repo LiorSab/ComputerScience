@@ -1,0 +1,42 @@
+import java.util.Arrays;
+import java.util.Random;
+
+public class NumberChecker {
+
+    public static void main(String[] args) {
+        // Example: Check if the number 7 is in the random array
+        int targetNumber = 7;
+        boolean result = checkNumber(targetNumber);
+
+        System.out.println("Is " + targetNumber + " in the random array? " + result);
+    }
+
+    public static boolean checkNumber(int target) {
+        // Generate an array of 10 random numbers
+        int[] randomArray = generateRandomArray(10);
+
+        // Print the random array
+        System.out.println("Random Array: " + Arrays.toString(randomArray));
+
+        // Check if the received number is in the random array
+        for (int number : randomArray) {
+            if (number == target) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static int[] generateRandomArray(int size) {
+        int[] randomArray = new int[size];
+        Random random = new Random();
+
+        for (int i = 0; i < size; i++) {
+            // Generate random numbers between 1 and 100 (adjust as needed)
+            randomArray[i] = random.nextInt(100) + 1;
+        }
+
+        return randomArray;
+    }
+}
