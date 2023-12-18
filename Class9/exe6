@@ -1,0 +1,44 @@
+import java.util.Arrays;
+import java.util.Random;
+
+public class EvenSumPairs {
+
+    public static void main(String[] args) {
+        // Example: Generate a random array and print pairs with even sums
+        int[] randomArray = generateRandomArray(10);
+        printEvenSumPairs(randomArray);
+    }
+
+    public static void printEvenSumPairs(int[] array) {
+        // Check if the array has at least two elements
+        if (array.length < 2) {
+            System.out.println("Not enough elements in the array to form pairs.");
+            return;
+        }
+
+        System.out.println("Pairs with even sums:");
+
+        // Iterate through the array up to the second-to-last element
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                // Check if the sum of the current pair is even
+                if ((array[i] + array[j]) % 2 == 0) {
+                    System.out.println("(" + array[i] + ", " + array[j] + ")");
+                }
+            }
+        }
+    }
+
+    public static int[] generateRandomArray(int size) {
+        int[] randomArray = new int[size];
+        Random random = new Random();
+
+        for (int i = 0; i < size; i++) {
+            // Generate random numbers between 1 and 100 (adjust as needed)
+            randomArray[i] = random.nextInt(100) + 1;
+        }
+
+        System.out.println("Random Array: " + Arrays.toString(randomArray));
+        return randomArray;
+    }
+}
