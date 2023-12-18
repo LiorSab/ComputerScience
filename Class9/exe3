@@ -1,0 +1,31 @@
+public class GradeCalculator {
+
+    public static void main(String[] args) {
+        int[] studentGrades = {78, 92, 85, 64, 76};
+
+        // Call the function to get the lowest grade
+        int lowestGrade = findLowestGrade(studentGrades);
+
+        System.out.println("The lowest grade is: " + lowestGrade);
+    }
+
+    public static int findLowestGrade(int[] grades) {
+        // Check if the array has at least one element
+        if (grades.length == 0) {
+            System.out.println("Empty array. No grades to compare.");
+            return -1; // Return a placeholder value indicating an error or empty array
+        }
+
+        // Assume the first grade is the lowest initially
+        int lowestGrade = grades[0];
+
+        // Iterate through the array to find the lowest grade
+        for (int i = 1; i < grades.length; i++) {
+            if (grades[i] < lowestGrade) {
+                lowestGrade = grades[i];
+            }
+        }
+
+        return lowestGrade;
+    }
+}
