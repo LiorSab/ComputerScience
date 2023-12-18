@@ -1,0 +1,28 @@
+public class Main {
+
+    public static void main(String[] args) {
+        int[] myArray = {3, 8, 5, 12, 7};
+        int myIndex = 2;
+
+        ensureEven(myArray, myIndex);
+        
+        // Print the modified array
+        for (int value : myArray) {
+            System.out.print(value + " ");
+        }
+    }
+
+    public static void ensureEven(int[] array, int index) {
+        // Check if the array has at least 5 elements and the index is within bounds
+        if (array.length < 5 || index < 0 || index >= array.length) {
+            System.out.println("Invalid input. The array should have at least 5 elements, and the index should be within the array bounds.");
+            return;
+        }
+
+        // Check if the value at the given index is even
+        if (array[index] % 2 != 0) {
+            // If it's not even, change it to the nearest even number
+            array[index] = (array[index] % 2 == 1) ? array[index] + 1 : array[index] - 1;
+        }
+    }
+}
