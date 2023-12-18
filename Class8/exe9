@@ -1,0 +1,3 @@
+ public boolean smallDiff(int otherDifference) {
+        return otherDifference < this.difference;
+    }
